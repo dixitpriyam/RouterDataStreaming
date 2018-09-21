@@ -1,3 +1,5 @@
+package readrouterdata
+
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types.StructType
 
@@ -7,12 +9,15 @@ object StructStreamRouterFromFile{
 
     val spark = SparkSession
       .builder
-      .appName("StructuredNetworkWordCount")
+      .appName("StructStreamRouterFromFile")
       .config("spark.master", "local")
       .config("spark.sql.warehouse.dir", "file:///C:/Users/priyamdixit/Desktop/RDA_01/spark-warehouse")
       .getOrCreate()
 
-    val userSchema = new StructType().add("name", "string")
+    val userSchema = new StructType()
+      .add("TimeStamp", "string")
+      .add("Router","string")
+      .add("messages","string")
     // Create DataFrame representing the stream of input lines from connection to host:port
 
 //    val df = sqlContext.read.
@@ -26,7 +31,7 @@ object StructStreamRouterFromFile{
     val lines = spark.readStream
       .format("com.databricks.spark.csv")
       .schema(userSchema)
-      .load("file:///C:/Users/priyamdixit/Desktop/SparkData/csv/")
+      .load("file:///C:/Users/priyamdixit/Desktop/SparkData/csv/messages/")
 
     import spark.implicits._
     // Split the lines into words
