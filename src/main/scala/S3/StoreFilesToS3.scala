@@ -13,8 +13,8 @@ object StoreFilesToS3 {
   val fileToUpload = new File("/wordout1/part-00000")
 
 
-  val AWS_ACCESS_KEY = "AKIAJHHMYM4CE6UNPXAA"
-  val AWS_SECRET_KEY = "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"
+  val AWS_ACCESS_KEY = "XX"
+  val AWS_SECRET_KEY = "XX"
   val SUFFIX: String  = "/"
 
 
