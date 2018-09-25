@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RDA_01.iml" filepath="$PROJECT_DIR$/.idea/modules/RDA_01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rda_01-build.iml" filepath="$PROJECT_DIR$/.idea/modules/rda_01-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/routerdatastreaming-build.iml" filepath="$PROJECT_DIR$/.idea/modules/routerdatastreaming-build.iml" />
     </modules>
   </component>
 </project>
